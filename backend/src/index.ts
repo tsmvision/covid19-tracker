@@ -1,12 +1,25 @@
 import express from 'express';
+import { ApolloServer, gql } from 'apollo-server-express';
+
+const PORT = 4000;
+
+const typeDefs = gql`
+    type Query {
+        hello: String
+    }
+`;
+
+const resolvers = {
+    Query: {
+        hello: () => 'Hello World'
+    }
+};
+
+const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
-const port = 4000;
+server.applyMiddleware({ app });
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
-app.listen(port ,() => {
-    console.log(`App listening at http://localhost:${port}`);
+app.listen({port: PORT}, () => {
+    console.log(`Server ready at http://localhost:${PORT}`);
 });

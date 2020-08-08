@@ -20,6 +20,8 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "@graphql-tools/merge": "^6.0.16",
+    "apollo-server-express": "^2.16.1",
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "graphql": "^15.3.0",
