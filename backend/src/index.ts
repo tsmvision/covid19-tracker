@@ -1,22 +1,28 @@
 import express from 'express';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer, gql, makeExecutableSchema } from 'apollo-server-express';
+import typeDefs from './typeDefs';
+import resolvers from './resolvers';
 
 const PORT = 4000;
 
-const typeDefs = gql`
-    type Query {
-        hello: String
-    }
-`;
+const schema = makeExecutableSchema({
+    typeDefs,
+    resolvers
+});
 
-const resolvers = {
-    Query: {
-        hello: () => 'Hello World'
-    }
-};
+// const typeDefs = gql`
+//     type Query {
+//         hello: String
+//     }
+// `;
 
-const server = new ApolloServer({ typeDefs, resolvers });
+// const resolvers = {
+//     Query: {
+//         hello: () => 'Hello World'
+//     }
+// };
 
+const server = new ApolloServer({ schema });
 const app = express();
 server.applyMiddleware({ app });
 
