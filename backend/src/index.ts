@@ -2,6 +2,7 @@ import express from 'express';
 import { ApolloServer, gql, makeExecutableSchema } from 'apollo-server-express';
 import typeDefs from './typeDefs';
 import resolvers from './resolvers';
+import cors from 'cors';
 
 const PORT = 4000;
 
@@ -24,6 +25,10 @@ const schema = makeExecutableSchema({
 
 const server = new ApolloServer({ schema });
 const app = express();
+
+// cors
+app.use(cors());
+
 server.applyMiddleware({ app });
 
 app.listen({port: PORT}, () => {
