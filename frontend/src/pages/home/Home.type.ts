@@ -11,6 +11,11 @@ export interface CardBlockProps {
     isValue1ColorGreen?: boolean
 }
 
-export interface LivesCasesByCountryProps extends Country {
+export interface LiveCasesByCountryProps {
+    countries: Country[],
+    limit?: number
+} 
+
+export interface LivesCasesByCountryRowProps extends Country {
     rowNumber: number
 }
