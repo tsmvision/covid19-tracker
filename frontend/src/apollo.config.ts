@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const LOCAL_SERVER_URL = 'http://localhost:4000/graphql';
 

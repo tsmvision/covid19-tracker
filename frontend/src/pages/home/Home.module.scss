@@ -1,0 +1,66 @@
+.title {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+    margin: 15px 0 15px 0;
+}
+
+.card {
+    box-shadow: 2px 2px 4px #d3d3d3;
+    border-radius: 0 !important;
+    min-height: 150px;
+    margin-bottom: 5px;
+}
+
+.cardTitle {
+    padding-top: 5px;
+    padding-left: 7px;
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
+    min-height: 49px;
+}
+
+.cardText {
+    font-size: 28px;
+    padding-left: 5px;
+}
+
+.cardTextRed {
+    @extend .cardText;
+    color: red;
+}
+
+.cardTextGreen {
+    @extend .cardText;
+    color: green;
+}
+
+.cardTotalText {
+    @extend .cardText;
+    font-size: 12px;
+    color: 	#808080;
+}
+
+.liveCasesByCountryTitle {
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    color: gray;
+}
+
+.liveCaseByCountry {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+    padding: 2px 2px 2px 2px;
+}
+
+.liveCaseByCountryOdd {
+    @extend .liveCaseByCountry;
+    background-color:#d5e1df;
+}
+
+.liveCaseByCountryEven {
+    @extend .liveCaseByCountry;
+}
