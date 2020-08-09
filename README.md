@@ -4,7 +4,15 @@ COVID 19 tracker application with React, Apollo client, Apollo server, and etc
 
 ## Getting Started
 
+clone repository in your local environment
+```
+git clone https://github.com/tsmvision/covid19-tracker.git
+```
+
+
 Install docker desktop if you don't have one.
+
+Run docker-compose command in the repository folder.
 
 ```
 $ docker-compose up
