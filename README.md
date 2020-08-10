@@ -18,9 +18,9 @@ Run docker-compose command in the repository folder.
 $ docker-compose up
 ```
 
-open your browser with 'http://localhost:3000'
+open your browser with 'http://localhost:3000' for frontend
 
-open your borwser with 'http://localhost:4000/graphql' if you want to play with graphql server
+open your borwser with 'http://localhost:4000/graphql' for backend if you want to play with graphql server
 
 You can stop application using docker-compose down
 ```
@@ -30,12 +30,12 @@ $ docker-compose down
 ### Prerequisites
 
 * install docker desktop
-* install node 12.x+ if you want to test frontend and backend application in the localhost rather than docker
+* install node 12.x+
 
 ## Built With
 
 For Frontend
-* React using create-react-app
+* React 16.x using create-react-app
 * CSS Modules
 * Apollo client
 * Typescript
