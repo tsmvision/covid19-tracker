@@ -9,6 +9,26 @@ clone repository in your local environment
 git clone https://github.com/tsmvision/covid19-tracker.git
 ```
 
+Move to the project folder
+```
+$ cd covid19-tracker
+```
+Install npm module for frontend and backend
+```
+$ cd backend
+$ npm install
+```
+
+```
+$ cd ..
+$ cd frontend
+$ npm install
+```
+
+Move to the project root folder
+```
+cd ..
+```
 
 Install docker desktop if you don't have one.
 
